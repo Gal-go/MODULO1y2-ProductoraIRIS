@@ -36,20 +36,45 @@ header .navbar {
             rgba(0, 0, 0, 0.5)), url("../img/ojos.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    padding: 2rem 1rem;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 .intro h1 {
     margin: 0px;
-    font-size: 7em;
+    font-size: clamp(2.5rem, 10vw, 5rem);
     margin-top: 50px;
     margin-bottom: 20px;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    word-break: break-word;
+    max-width: 90%;
 }
 
 .intro h2 {
-    font-size: 3em;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    max-width: 90%;
+}
+
+.intro .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 576px) {
+    .intro {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
 body {
@@ -66,13 +91,15 @@ body {
 }
 
 .somos h1 {
-    font-size: 5em;
+    font-size: clamp(2rem, 8vw, 4rem);
     margin-bottom: 20px;
     font-family: 'Lato', serif;
+    max-width: 100%;
+    word-break: break-word;
 }
 
 .somos h2 {
-    font-size: 2.5em;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     margin-bottom: 20px;
     font-family: 'Lato', serif;
     font-style: bold;
