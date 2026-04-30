@@ -1,3 +1,5 @@
+/* CSS para estilos generales */
+
 h1,
 h2 {
     font-family: 'Cormorant Garamond', serif;
@@ -34,8 +36,8 @@ header .navbar {
 .intro {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)), url("../img/ojos.jpg");
-    background-size: cover;
-    background-position: center;
+    background-size: 105%;
+    background-position: 110% center;
     background-repeat: no-repeat;
     min-height: 100vh;
     height: auto;
@@ -55,12 +57,45 @@ html, body {
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     word-break: break-word;
     max-width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .intro h2 {
     font-size: clamp(1.2rem, 4vw, 2.5rem);
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     max-width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagina {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../img/tuproyecto.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    height: auto;
+    overflow-x: hidden;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagina h1 {
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    color: #f7f7f7;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    word-break: break-word;
+    max-width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .intro .container {
@@ -116,7 +151,7 @@ body {
 .tarjeta-servicio {
     background-color: #111;
     border-radius: 10px;
-    overflow: hidden; /* clave para que la imagen respete bordes */
+    overflow: hidden; 
     border: 1px solid rgba(255,255,255,0.1);
     transition: all 0.3s ease;
 }
