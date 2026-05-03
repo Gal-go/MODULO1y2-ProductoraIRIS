@@ -1,6 +1,3 @@
-// ============================================
-// DATOS - Servicios con secciones
-// ============================================
 const servicios = {
     marcaPersonal: {
         titulo: "Marca Personal",
@@ -102,7 +99,6 @@ function mostrarCategoria(categoria) {
     document.getElementById('lista-seleccionados').innerHTML =
         '<li class="list-group-item text-muted">No hay servicios seleccionados</li>';
 
-    // Crear cards por cada sección
     let html = '';
     servicios[categoria].opciones.forEach(function (seccion) {
         html += `
@@ -141,19 +137,14 @@ function mostrarCategoria(categoria) {
     formulario.scrollIntoView({ behavior: 'smooth' });
 }
 
-// ============================================
-// ACTUALIZAR PRECIO CUANDO MARCAS O DESMARCAS
-// ============================================
 function actualizarPrecio(checkbox) {
     const precio = parseInt(checkbox.value);
     const nombre = checkbox.dataset.nombre;
 
     if (checkbox.checked) {
-        // Agregar al total
         total = total + precio;
         seleccionados.push(nombre + ' - $' + precio.toLocaleString());
     } else {
-        // Restar del total
         total = total - precio;
         const indice = seleccionados.indexOf(nombre + ' - $' + precio.toLocaleString());
         if (indice > -1) {
@@ -163,7 +154,6 @@ function actualizarPrecio(checkbox) {
 
     document.getElementById('total-precio').textContent = total.toLocaleString();
 
-    // Actualizar lista
     const lista = document.getElementById('lista-seleccionados');
     if (seleccionados.length === 0) {
         lista.innerHTML = '<li class="list-group-item text-muted">No hay servicios seleccionados</li>';

@@ -55,6 +55,8 @@
             <hr>
             <button type="button" id="addNote">+ Nota</button>
             <button type="button" id="clearCanvas">Limpiar lienzo</button>
+            <hr>
+            <button type="button" id="helpButton">? Tutorial</button>
         </aside>
 
         <main class="board-container">
@@ -63,31 +65,33 @@
         </main>
     </div>
 
-    <!-- Modal de Bienvenida -->
-    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="welcomeLabel">Bienvenido a IMAGINÁ</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Bienvenido al espacio creativo de Iris. Aquí puedes:</p>
-                    <ul>
-                        <li>Dibujar con lápiz, formas y líneas</li>
-                        <li>Cambiar colores y usar la goma de borrar</li>
-                        <li>Añadir notas arrastrables</li>
-                        <li>Usar deshacer y rehacer para corregir</li>
-                        <li>Tu trabajo se guardará automáticamente</li>
-                    </ul>
-                    <p class="mt-3 mb-0"><strong>Comienza a crear. ¡Tu imaginación es el límite!</strong></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+    <section>
+        <div class="modal fade" id="popupBienvenida" tabindex="-1" aria-labelledby="popupBienvenidaLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="popupBienvenidaLabel">Bienvenido a IMAGINÁ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Bienvenido al espacio creativo de Iris. Aquí puedes:</p>
+                        <ul>
+                            <li>Dibujar con lápiz, formas y líneas</li>
+                            <li>Cambiar colores y usar la goma de borrar</li>
+                            <li>Añadir notas arrastrables</li>
+                            <li>Usar deshacer y rehacer para corregir</li>
+                            <li>Tu trabajo se guardará automáticamente</li>
+                        </ul>
+                        <p class="mt-3 mb-0"><strong>Comienza a crear. ¡Tu imaginación es el límite!</strong></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <footer class="footer d-flex justify-content-center align-items-center text-center bg-black text-white py-3">
         <div class="container">

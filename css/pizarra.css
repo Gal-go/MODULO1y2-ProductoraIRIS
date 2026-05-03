@@ -110,4 +110,38 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* Estilos para el modal de bienvenida */
+#popupBienvenida .modal-content {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#popupBienvenida .modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+#popupBienvenida .modal-title {
+  color: #000000;
+}
+
+#popupBienvenida .modal-body {
+  color: #000000;
+}
+
+#popupBienvenida .modal-body p,
+#popupBienvenida .modal-body li {
+  color: #000000;
+}
+
+#popupBienvenida .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+#popupBienvenida .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
    

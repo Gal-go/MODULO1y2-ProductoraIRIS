@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let snapshot = null;
     let color = colorPicker.value || "#000000";
 
-    // ============================================
-    // GUARDAR Y CARGAR CON LOCALSTORAGE
-    // ============================================
     function saveCanvasToStorage() {
         const canvasData = canvas.toDataURL();
         localStorage.setItem('pizarraCanvas', canvasData);
@@ -76,13 +73,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Mostrar modal de bienvenida si es primera visita
     function showWelcomeIfFirstVisit() {
         if (!localStorage.getItem('pizarraVisitado')) {
             localStorage.setItem('pizarraVisitado', 'true');
-            const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
-            welcomeModal.show();
+            const popupBienvenida = new bootstrap.Modal(document.getElementById('popupBienvenida'));
+            popupBienvenida.show();
         }
+    }
+
+    function showTutorial() {
+        const popupBienvenida = new bootstrap.Modal(document.getElementById('popupBienvenida'));
+        popupBienvenida.show();
+    }
+
+    const helpButton = document.getElementById('helpButton');
+    if (helpButton) {
+        helpButton.addEventListener('click', showTutorial);
     }
 
     function resizeCanvas() {
@@ -100,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
 
-    // Cargar datos guardados
     loadCanvasFromStorage();
     loadNotesFromStorage();
     showWelcomeIfFirstVisit();
