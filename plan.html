@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matias Torres">
+    <meta name="description" content="Trabajo Práctico 2.0; Modulo 1 - Diplomatura Fullstack ICARO">
+    <meta name="keywords" content="productora, cine, portfolio, fotos, empresa">
+    <title> Iris | Productora Audiovisual </title>
+    <link rel="icon" type="img/icon" href="img/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body style="background-color: #ffffff; color: #000000;">
+    <header id="header" class="header">
+        <nav class="navbar navbar-dark bg-black navbar-expand-lg">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#"> IRIS | PRODUCTORA</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"> INICIO</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="imagina.html"> IMAGINÁ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="plan.html"> PLANEÁ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="somos.html"> SOMOS</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html"> SERVICIOS</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html"> PORTFOLIO</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html"> CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="imagina d-flex justify-content-center align-items-start text-center">
+            <div class="container">
+                <h1> IMAGINÁ CON NOSOTROS </h1>
+            </div>
+        </section>
+        <hr class="w-50 justify-content-center align-items-center text-center mx-auto my-5">
+
+        <section class="somos text-start p-0 justify-content-center align-items-center text-center">
+            <div class="container">
+                <h1> ¿QUÉ NECESITAS? </h1>
+                <p class="mb-4">Seleccioná la opción que mejor te represente</p>
+                <hr class="w-50 justify-content-center align-items-center text-center mx-auto my-5">
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <button type="button" class="btn btn-outline-dark w-100 p-4 h-100"
+                            onclick="mostrarCategoria('marcaPersonal')">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="fs-3 mb-2">🎨</span>
+                                <strong>Marca Personal</strong>
+                                <small class="text-muted mt-2">Soy artista/influencer y necesito asesoramiento</small>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <button type="button" class="btn btn-outline-dark w-100 p-4 h-100"
+                            onclick="mostrarCategoria('marcaEmpresarial')">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="fs-3 mb-2">🏢</span>
+                                <strong>Marca Empresarial</strong>
+                                <small class="text-muted mt-2">Quiero aumentar mi presencia y ventas en redes</small>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <button type="button" class="btn btn-outline-dark w-100 p-4 h-100"
+                            onclick="mostrarCategoria('evento')">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="fs-3 mb-2">🎪</span>
+                                <strong>Evento</strong>
+                                <small class="text-muted mt-2">Organizo un evento especial y no puede fallar</small>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <button type="button" class="btn btn-outline-dark w-100 p-4 h-100"
+                            onclick="mostrarCategoria('otro')">
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="fs-3 mb-2">💭</span>
+                                <strong>Otro</strong>
+                                <small class="text-muted mt-2">Cuéntanos tu caso y lo haremos realidad</small>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="formulario-servicios" class="container my-5" style="display: none;">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <h2 id="titulo-categoria" class="mb-4"></h2>
+                    <div id="lista-servicios"></div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card sticky-top" style="top: 100px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Resumen de Servicios</h5>
+                            <ul id="lista-seleccionados" class="list-group mb-3">
+                                <li class="list-group-item text-muted">No hay servicios seleccionados</li>
+                            </ul>
+                            <hr>
+                            <h4>Total: $<span id="total-precio">0</span></h4>
+                            <button type="button" class="btn btn-dark w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalCalendario">Agendar cita</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para agendar cita -->
+        <div class="modal fade" id="modalCalendario" tabindex="-1" aria-labelledby="modalCalendarioLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCalendarioLabel">Agendar Cita</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Selecciona una fecha:</h6>
+                                <input type="date" id="fechaCita" class="form-control" min="" onchange="mostrarHorarios()">
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Selecciona una hora:</h6>
+                                <div id="horarios">
+                                    <p class="text-muted">Primero selecciona una fecha</p>
+                                </div>
+                                <div id="resumenCita" class="mt-3" style="display: none;">
+                                    <h6>Resumen de tu cita:</h6>
+                                    <p id="fechaSeleccionada"></p>
+                                    <p id="horaSeleccionada"></p>
+                                    <button type="button" class="btn btn-success w-100" onclick="confirmarCita()">Confirmar Cita</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="w-50 justify-content-center align-items-center text-center mx-auto my-5">
+
+    </main>
+
+    <footer class="footer d-flex justify-content-center align-items-center text-center">
+        <div class="container">
+            <p> © 2026 IRIS PRODUCCIONES. Todos los derechos reservados. </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script>
+        let fechaSeleccionada = null;
+        let horaSeleccionada = null;
+
+        // Inicializar fecha mínima cuando se abre el modal
+        document.getElementById('modalCalendario').addEventListener('shown.bs.modal', function () {
+            const hoy = new Date().toISOString().split('T')[0];
+            document.getElementById('fechaCita').min = hoy;
+            document.getElementById('fechaCita').value = hoy;
+            fechaSeleccionada = hoy;
+            mostrarHorarios();
+        });
+
+        function mostrarHorarios() {
+            const fechaInput = document.getElementById('fechaCita');
+            fechaSeleccionada = fechaInput.value;
+
+            if (!fechaSeleccionada) {
+                document.getElementById('horarios').innerHTML = '<p class="text-muted">Primero selecciona una fecha</p>';
+                return;
+            }
+
+            const horariosDiv = document.getElementById('horarios');
+            const horasDisponibles = ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00'];
+
+            let html = '<div class="list-group">';
+            horasDisponibles.forEach(hora => {
+                html += `<button type="button" class="list-group-item list-group-item-action" onclick="seleccionarHora('${hora}')">${hora}</button>`;
+            });
+            html += '</div>';
+            horariosDiv.innerHTML = html;
+        }
+
+        function seleccionarHora(hora) {
+            horaSeleccionada = hora;
+            const fechaFormateada = new Date(fechaSeleccionada).toLocaleDateString('es-ES');
+            document.getElementById('fechaSeleccionada').textContent = `Fecha: ${fechaFormateada}`;
+            document.getElementById('horaSeleccionada').textContent = `Hora: ${horaSeleccionada}`;
+            document.getElementById('resumenCita').style.display = 'block';
+        }
+
+        function confirmarCita() {
+            if (fechaSeleccionada && horaSeleccionada) {
+                const fechaFormateada = new Date(fechaSeleccionada).toLocaleDateString('es-ES');
+                alert(`¡Cita agendada exitosamente!\nFecha: ${fechaFormateada}\nHora: ${horaSeleccionada}`);
+                // Cerrar modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('modalCalendario'));
+                modal.hide();
+                // Resetear selecciones
+                fechaSeleccionada = null;
+                horaSeleccionada = null;
+                document.getElementById('resumenCita').style.display = 'none';
+            }
+        }
+    </script>
+</body>

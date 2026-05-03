@@ -15,7 +15,6 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/interacciones.css">
 
 </head>
 
@@ -33,27 +32,25 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html"> HOME</a>
+                            <a class="nav-link" href="index.html"> INICIO</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="somos.html"> Somos</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="servicios.html"> Servicios</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html"> Portfolio</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html"> Contacto</a>
-                        </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="imagina.html"> IMAGINÁ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="plan.html"> PLANEÁ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="somos.html"> SOMOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html"> SERVICIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html"> PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html"> CONTACTO</a>
                         </li>
                     </ul>
                 </div>
@@ -69,108 +66,163 @@
                 <hr class="w-50 mx-auto my-5">
                 <div class="row g-4">
                     <div class="col-12 col-md-4 mb-5">
-                        <div class="tarjeta-servicio h-100">
-
-                                <img src="img/brand.png" class="img-fluid servicios-img" alt="Branding">
-
-                                <div class="p-4">
-
-                                    <h3>Branding</h3>
-
-                                    <p class="servicios-desc">
-                                        Creamos identidades visuales sólidas que conectan con tu audiencia.
-                                    </p>
-
-                                    <ul class="list-unstyled mt-3">
-                                        <li>Estrategia de marca</li>
-                                        <li>Diseño de logo</li>
-                                        <li>Manual de marca</li>
-                                        <li>Rebranding</li>
-                                        <li>Identidad de redes</li>
-                                    </ul>
-
-                                    <a href="contacto.html" class="btn btn-outline-light mt-3">
-                                        ¡Ayudame con mi marca!
-                                    </a>
-
-                                </div>
-
+                        <div class="tarjeta-servicio h-100 clickable" onclick="mostrarGaleria('branding')">
+                            <img src="img/brand.png" class="img-fluid servicios-img" alt="Branding">
+                            <div class="p-4">
+                                <h3>Branding</h3>
+                                <p class="servicios-desc">
+                                    Creamos identidades visuales sólidas que conectan con tu audiencia.
+                                </p>
+                                <ul class="list-unstyled mt-3">
+                                    <li>Estrategia de marca</li>
+                                    <li>Diseño de logo</li>
+                                    <li>Manual de marca</li>
+                                    <li>Rebranding</li>
+                                    <li>Identidad de redes</li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
 
-<div class="col-12 col-md-4 mb-5">
-                            <div class="tarjeta-servicio h-100">
-
-                                <img src="img/ed.jpg" class="img-fluid servicios-img" alt="Edición Audiovisual">
-
-                                <div class="p-4">
-
-                                    <h3>Edición Audiovisual</h3>
-
-                                    <p class="servicios-desc">
-                                        Creamos contenido audiovisual de calidad que captura la atención de tu
-                                        audiencia.
-                                    </p>
-
-                                    <ul class="list-unstyled mt-3">
-                                        <li>Edición de video</li>
-                                        <li>Corrección de color</li>
-                                        <li>Motion graphics</li>
-                                        <li>Postproducción</li>
-                                    </ul>
-
-                                    <a href="contacto.html" class="btn btn-outline-light mt-3">
-                                        ¡Necesito un editor!
-                                    </a>
-
-                                </div>
-
+                    <div class="col-12 col-md-4 mb-5">
+                        <div class="tarjeta-servicio h-100 clickable" onclick="mostrarGaleria('edicion')">
+                            <img src="img/ed.jpg" class="img-fluid servicios-img" alt="Edición Audiovisual">
+                            <div class="p-4">
+                                <h3>Edición Audiovisual</h3>
+                                <p class="servicios-desc">
+                                    Creamos contenido audiovisual de calidad que captura la atención de tu
+                                    audiencia.
+                                </p>
+                                <ul class="list-unstyled mt-3">
+                                    <li>Edición de video</li>
+                                    <li>Corrección de color</li>
+                                    <li>Motion graphics</li>
+                                    <li>Postproducción</li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
 
-<div class="col-12 col-md-4 mb-5">
-                            <div class="tarjeta-servicio h-100">
-
-                                <img src="img/cm.png" class="img-fluid servicios-img" alt="Branding">
-
-                                <div class="p-4">
-
-                                    <h3>Community Management</h3>
-
-                                    <p class="servicios-desc">
-                                        Gestionamos tu presencia en redes sociales y construimos comunidades digitales
-                                        sólidas.
-                                    </p>
-
-                                    <ul class="list-unstyled mt-3">
-                                        <li>Gestión de redes sociales</li>
-                                        <li>Creación de contenido</li>
-                                        <li>Community building</li>
-                                        <li>Analítica de redes</li>
-                                        <li>Respuesta a comentarios</li>
-                                    </ul>
-
-                                    <a href="contacto.html" class="btn btn-outline-light mt-3">
-                                        ¡Quiero un community manager!
-                                    </a>
-
-                                </div>
-
+                    <div class="col-12 col-md-4 mb-5">
+                        <div class="tarjeta-servicio h-100 clickable" onclick="mostrarGaleria('community')">
+                            <img src="img/cm.png" class="img-fluid servicios-img" alt="Community Management">
+                            <div class="p-4">
+                                <h3>Community Management</h3>
+                                <p class="servicios-desc">
+                                    Gestionamos tu presencia en redes sociales y construimos comunidades digitales
+                                    sólidas.
+                                </p>
+                                <ul class="list-unstyled mt-3">
+                                    <li>Gestión de redes sociales</li>
+                                    <li>Creación de contenido</li>
+                                    <li>Community building</li>
+                                    <li>Analítica de redes</li>
+                                    <li>Respuesta a comentarios</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
-
-        <footer class="footer d-flex justify-content-center align-items-center text-center">
-            <div class="container">
-                <p> © 2024 IRIS PRODUCCIONES. Todos los derechos reservados. </p>
             </div>
-        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+            <div id="galeriaServicios" class="container mb-5" style="display: none;">
+                <div id="galeriaBranding" class="galeria-servicio">
+                    <div class="mb-4 text-start">
+                        <h2>Herramientas de Branding</h2>
+                        <p>Fotos inspiradoras de identidad visual, packaging y diseño de marca.</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-12 col-md-4">
+                            <div class="thumbnail-container">
+                                <img src="img/servicios/premiere.jpg" class="img-fluid rounded thumbnail" alt="Branding 1" onclick="abrirImagen('img/servicios/premiere.jpg', 'Branding 1')">
+                                <div class="caption">Adobe Premiere Pro para edición de video profesional.</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="thumbnail-container">
+                                <img src="img/servicios/analisis.png" class="img-fluid rounded thumbnail" alt="Branding 2" onclick="abrirImagen('img/servicios/analisis.png', 'Branding 2')">
+                                <div class="caption">Herramientas de análisis de datos para estrategias de marca.</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="thumbnail-container">
+                                <img src="img/servicios/photoshop.jpg" class="img-fluid rounded thumbnail" alt="Branding 3" onclick="abrirImagen('img/servicios/photoshop.jpg', 'Branding 3')">
+                                <div class="caption">Adobe Photoshop para diseño gráfico y manipulación de imágenes.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div id="galeriaEdicion" class="galeria-servicio" style="display: none;">
+                    <div class="mb-4 text-start">
+                        <h2>Herramientas de Edición Audiovisual</h2>
+                        <p>Imágenes de montaje, escenas y piezas finales para tus contenidos.</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-12 col-md-4">
+                            <div class="thumbnail-container">
+                                <img src="img/servicios/camara.jpg" class="img-fluid rounded thumbnail" alt="Edición 1" onclick="abrirImagen('img/servicios/camara.jpg', 'Edición 1')">
+                                <div class="caption">Cámaras profesionales para capturar contenido de alta calidad.</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="thumbnail-container">
+                                <img src="img/servicios/ilu.jpg" class="img-fluid rounded thumbnail" alt="Edición 2" onclick="abrirImagen('img/servicios/ilu.jpg', 'Edición 2')">
+                                <div class="caption">Equipos de iluminación para producciones audiovisuales.</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="thumbnail-container">
+                                <img src="img/servicios/micro.jpeg" class="img-fluid rounded thumbnail" alt="Edición 3" onclick="abrirImagen('img/servicios/micro.jpeg', 'Edición 3')">
+                                <div class="caption">Micrófonos y equipos de audio para grabaciones profesionales.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="galeriaCommunity" class="galeria-servicio" style="display: none;">
+                    <div class="mb-4 text-start">
+                        <h2>Herramientas de Community Management</h2>
+                        <p>Ejemplos de contenido, reels y piezas sociales para tus redes.</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-12 col-md-4">
+                            <div class="thumbnail-container">
+                                <img src="img/servicios/influ.jpg" class="img-fluid rounded thumbnail" alt="Community 1" onclick="abrirImagen('img/servicios/influ.jpg', 'Community 1')">
+                                <div class="caption">Estrategias de influencer marketing para aumentar el alcance.</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="thumbnail-container">
+                                <img src="img/servicios/tienda.jpg" class="img-fluid rounded thumbnail" alt="Community 2" onclick="abrirImagen('img/servicios/tienda.jpg', 'Community 2')">
+                                <div class="caption">Gestión de tiendas online y e-commerce.</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="thumbnail-container">
+                                <img src="img/servicios/gestion.png" class="img-fluid rounded thumbnail" alt="Community 3" onclick="abrirImagen('img/servicios/gestion.png', 'Community 3')">
+                                <div class="caption">Herramientas de gestión de redes sociales y analytics.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="overlayImagen" class="overlay-imagen" style="display: none;" onclick="cerrarOverlayImagen(event)">
+            <img id="overlayImagenContenido" class="overlay-img" src="" alt="">
+        </div>
+    </main>
+
+    <footer class="footer d-flex justify-content-center align-items-center text-center">
+        <div class="container">
+            <p> © 2026 IRIS PRODUCCIONES. Todos los derechos reservados. </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
